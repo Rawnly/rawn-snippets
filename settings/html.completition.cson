@@ -37,6 +37,7 @@
       'x6',
       'cl-section',
       'content',
+      'container',
       'clear',
       'dark',
       'light',

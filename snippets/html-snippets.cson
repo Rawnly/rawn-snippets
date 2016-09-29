@@ -48,3 +48,8 @@
   'Comment':
     'prefix': 'c'
     'body': '<!-- $1 -->'
+  'container':
+    'prefix': 'co'
+    'body': """
+      <div class="container">${1:your code}</div>
+    """
