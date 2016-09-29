@@ -1,0 +1,42 @@
+'.source.coffee':
+  'Lang Snip':
+    'prefix': 'lang'
+    'body': """
+      '.source.${1:[language-name]}':
+        '${2:[name]}':
+          'prefix': '${3:[prefix]}'
+          'body': '${4:[Code Here]}'
+          'description': '${5:description}'
+    """
+  'Forked Snippet':
+    'prefix': 'fo'
+    'body': """
+      '${1:[name]}':
+        'prefix': '${2:[prefix]}'
+        'body': '${3:[Code Here]}'
+        'description': '${5:description}'
+    """
+  'Separator' :
+    'prefix': 'sep'
+    'body': '####### ####### ${1:title} ####### #######'
+    'description': 'separator for snippets'
+
+  'Ajax Connection':
+    'prefix': 'ajax'
+    'body': """
+        $.ajax({
+           url: ${1:'http://example.com'}
+           data: {
+              format: '${2:json}'
+           }
+           error: function(e) {
+             ${3:console.log 'An error is occurred!', e}
+           }
+           dataType: '${4:jsonp}',
+           success: function(data) {
+             ${5:console.log data}
+           }
+           type: '${6:[Request type ( GET / POST )]}'
+        });
+    """
+    'description': 'Ajax Connecton'

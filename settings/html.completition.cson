@@ -1,0 +1,51 @@
+'.text.html, .text.css, .source.scss, .source.js, .source.coffee':
+  'editor':
+    'completions': [
+
+      # Snippets
+      'h-'
+
+      # Classes V2
+      'font',
+      'oswald',
+      'muli',
+      'roboto',
+      'bungee',
+      'satisfy',
+      'courgette',
+      'josefin-sans',
+      'indie-flower',
+      'lobster',
+      'bitter',
+      'roboto-sans',
+      'center',
+      'superbold',
+      'boldest',
+      'bold',
+      'normal',
+      'thin',
+      'thinner',
+      'thinnest',
+      'left',
+      'right',
+      'justify',
+      'x1',
+      'x2',
+      'x3',
+      'x4',
+      'x5',
+      'x6',
+      'cl-section',
+      'content',
+      'clear',
+      'dark',
+      'light',
+      'underline',
+      'overline',
+      'underline',
+      'strike',
+      'footer',
+      'page-centered',
+      'p',
+      'an'
+    ]

@@ -1,0 +1,121 @@
+####### ####### JavaScript ####### #######
+'.source.js':
+  'Document Ready':
+    'prefix': 'doc'
+    'body': """
+      $(document).ready(function() {
+        ${1:console.log('Document Ready');}
+      });
+    """
+    'description': 'jQuery Ready Function'
+
+  'Scroll Anchors':
+    'prefix': 'sm'
+    'body': """
+      $('a').click(function(){
+        $('html, body').animate({
+          scrollTop: $('[${1:selector-attribute}="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+        }, ${2:500});
+        return false;
+      });
+    """
+    'description': 'Smooth scroll anchors'
+  'Plugin Template':
+    'prefix': 'pl'
+    'body': """
+      (function( $ ) {
+        $.fn.${1:function_name} = function ( options ) {
+          settings = $.extend({
+            ${2:default-setting: setting,}
+          }, options);
+        }
+      } ( jQuery ) );
+    """
+  'Ajax Connection':
+    'prefix': 'ajax'
+    'body': """
+        $.ajax({
+           url: ${1:'http://example.com'},
+           data: {
+              format: '${2:json}'
+           },
+           error: function(e) {
+             ${3:console.log('An error is occurred!', e);}
+           },
+           dataType: '${4:jsonp}',
+           success: function(data) {
+             ${5:console.log(data);}
+           },
+           type: '${6:[Request type ( GET / POST )]}'
+        });
+    """
+    'description': 'AJAX Connection'
+  'Sample Gulpfile':
+    'prefix': 'gulp'
+    'body': """
+      var gulp = require('gulp');
+      var coffee = require('gulp-coffee');
+      var sass = require('gulp-sass');
+      var gutil = require('gulp-util');
+      var chalk = require('chalk');
+      var connect = require('gulp-connect-php');
+      var browserSync = require('browser-sync');
+
+      gulp.task('default', function () {
+        console.log(chalk.green.inverse(' Watching ') + chalk.inverse.bold(' for ') + chalk.inverse.red('changes...'));
+
+        gulp.watch('./coffee/**/*.coffee', ['coffee']);
+        gulp.watch('./sass/**/*.scss', ['sass']);
+
+        connect.server({
+          base: './dist',
+          port: 4000
+        }, function () {
+          browserSync({
+            injectChanges: true,
+            proxy: '0.0.0.0:4000'
+          });
+        });
+
+        gulp.watch('./dist/**/**').on('change', function () {
+          browserSync.reload();
+        });
+
+      });
+
+      gulp.task('coffee', function() {
+        gulp.src('./coffee/*.coffee')
+          .pipe(coffee({bare: true}).on('error', gutil.log))
+          .pipe(gulp.dest('./dist/js/'));
+          console.log( chalk.yellow.inverse.bold('Coffescript ') + chalk.inverse('updated') );
+      });
+
+      gulp.task('sass', function () {
+        console.log( chalk.yellow.inverse.bold('Sass ') + chalk.inverse('updated') );
+        gulp.src('./sass/*.scss')
+          .pipe(sass().on('error', sass.logError))
+          .pipe(gulp.dest('./dist/css'));
+      });
+
+      gulp.task('phpserver', function() {
+        connect.server({
+          base: './dist'
+        }, function () {
+          browserSync({
+            proxy: '0.0.0.0:8000'
+          });
+        });
+
+        gulp.watch('./dist/**/**').on('change', function () {
+          browserSync.reload();
+        });
+      });
+
+      gulp.task('help', function () {
+        console.log('');
+        console.log('gulp' + ' ' + chalk.green('webserver') + '                 ' + chalk.gray('# Start a server.'));
+        console.log('gulp' + ' ' + chalk.green('watch') + '                     ' + chalk.gray('# Watch files.'));
+        console.log('');
+      });
+    """
+    'description': 'Sample Gulpfile'

@@ -1,0 +1,16 @@
+{
+  "name": "rawn-snippets",
+  "version": "0.0.0",
+  "description": "All my snippets",
+  "keywords": [
+    "language",
+    "grammar",
+    "snippets"
+  ],
+  "repository": "https://github.com/atom/rawn-snippets",
+  "author": "(c) Federico Vitale",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
