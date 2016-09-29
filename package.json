@@ -7,7 +7,7 @@
     "grammar",
     "snippets"
   ],
-  "repository": "https://github.com/atom/rawn-snippets",
+  "repository": "https://github.com/Rawnly/rawn-snippets",
   "author": "(c) Federico Vitale",
   "license": "MIT",
   "engines": {
