@@ -1,5 +1,5 @@
 '.text.html':
-  'Custom HTML':
+  'HTML Template':
     'prefix': 'h-'
     'body': """
       <!DOCTYPE html>
