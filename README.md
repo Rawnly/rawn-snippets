@@ -1,3 +1,6 @@
-# Rawnly Snippets
+# Rawn Snippets
 
-All my useful / unuseful snippets!
+## Install
+```bash
+ apm install rawn-snippets
+```
