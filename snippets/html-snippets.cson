@@ -34,7 +34,7 @@
           <!-- Bootstrap CSS -->
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-          <!-- Classes CSS -->
+          <!-- Chili CSS -->
           <link rel="stylesheet" href="https://rawgit.com/Rawnly/V2Classes.css/master/css/classes.css" >
           <!-- Personal Stylesheet -->
           <link rel="stylesheet" href="${5:css/style.css}" />
