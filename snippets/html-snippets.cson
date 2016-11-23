@@ -9,10 +9,13 @@
           <meta charset="utf-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#${2:hexcode}">
+          <meta name="theme-color" content="#${2:fff}">
           <!-- / Meta tags -->
 
           <title>${3:Untitled}</title>
+
+          <link rel="icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/picol-vector/32/server_edit-20.png">
+
           <!-- jQuery -->
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
           <!-- jQuery Color -->
@@ -48,8 +51,3 @@
   'Comment':
     'prefix': 'c'
     'body': '<!-- $1 -->'
-  'container':
-    'prefix': 'co'
-    'body': """
-      <div class="container">${1:your code}</div>
-    """
