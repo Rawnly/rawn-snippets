@@ -11,7 +11,6 @@ This **package** contains some useful snippets for HTML, CSS, JavaScript, Coffee
 #### HTML
 - Html Template
 - Html Comment
-- [BootStrap]() Container
 
 #### CSS & SASS
 - Basic Template
